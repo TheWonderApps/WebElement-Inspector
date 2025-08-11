@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![WebElement Inspector Logo](icons/icon128.png)
-
 **Complete User Guide for WebElement Inspector Chrome Extension**
 
 _Your comprehensive resource for mastering element location and locator generation_
