@@ -752,51 +752,6 @@ page.locator(".MuiButton-root.MuiButton-contained.css-1234567");
 
 ---
 
-## 🤝 Getting Support
-
-### Before Seeking Help
-
-1. **Check this Help document** - Most common issues are covered here
-2. **Try basic troubleshooting** - Refresh page, restart browser
-3. **Test on different websites** - Isolate the issue
-4. **Check browser console** - Look for error messages
-
-### Support Channels
-
-#### **🐛 Bug Reports**
-
-**GitHub Issues**: [Report a Bug](https://github.com/TheWonderApps/FindMyWebElement/issues)
-
-**Include this information**:
-
-- Chrome version
-- Extension version
-- Website URL (if not sensitive)
-- Steps to reproduce
-- Screenshot or screen recording
-- Browser console errors
-
-#### **💡 Feature Requests**
-
-**GitHub Discussions**: [Request Features](https://github.com/TheWonderApps/FindMyWebElement/discussions)
-
-**Describe**:
-
-- What you want to achieve
-- Current workaround (if any)
-- Why it would be helpful
-- Example use cases
-
-#### **❓ General Questions**
-
-**GitHub Discussions**: [Ask Questions](https://github.com/TheWonderApps/FindMyWebElement/discussions)
-
-**For questions about**:
-
-- How to use specific features
-- Best practices
-- Integration with other tools
-- Learning resources
 
 ### Community Resources
 
@@ -826,6 +781,6 @@ _Remember: The best locator is the one that works consistently in your specific 
 
 **Need more help?** Visit our [GitHub repository](https://github.com/TheWonderApps/FindMyWebElement) or [open an issue](https://github.com/TheWonderApps/FindMyWebElement/issues).
 
-Made with ❤️ by [TheWonderApps](https://github.com/TheWonderApps)
+Made with ❤️ by ##Nishad Hameed##
 
 </div>
