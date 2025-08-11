@@ -1,753 +1,848 @@
-# WebElement Inspector Chrome Extension
+# 🆘 WebElement Inspector v2.0.0 Help Guide
 
-<div align="left">
-A powerful browser extension to simplify locating unique elements within a DOM structure. Playwright supported locator genertor.
+<div align="center">
+
+![WebElement Inspector Logo](icons/icon128.png)
+
+**Complete User Guide for WebElement Inspector Chrome Extension**
+
+_Your comprehensive resource for mastering element location and locator generation_
+
+**Version 2.0.0 | Released August 11, 2025**
 
 </div>
 
-## 🎯 Features
+---
 
-### Core Functionality
+## 📚 Table of Contents
 
-- **🖱️ One-Click Element Selection**: Generate unique selectors with a single click
-- **🎨 Visual Element Highlighting**: Intuitive interface with hover tooltips and element indicators
-- **📋 Multiple Locator Strategies**: CSS selectors, XPath expressions, and Playwright locators
-- **👁️ Interactive Preview**: Preview and validate selected elements before using locators
-- **💾 Copy-Ready Code**: Instant clipboard access for development and testing workflows
-- **⚡ Live Inspector**: Real-time locator generation as you hover over elements
-
-### Advanced Capabilities
-
-- **🏗️ Comprehensive DOM Support**: Works with iframes, Shadow DOM, SVG elements, and dynamic content
-- **🎪 Cross-Frame Compatibility**: Handles nested iframes and cross-origin scenarios gracefully
-- **🔍 Smart Element Detection**: Identifies dynamic elements, framework-generated content, and invisible UI components
-- **🎯 Precision Targeting**: Element coordinates, dimensions, and visibility state detection
-- **🧭 Advanced Relationship Selectors**: Sibling, ancestor, descendant, and axes-based locators
-- **♿ Accessibility Integration**: ARIA attributes, roles, and semantic markup support
-
-### Playwright Integration
-
-- **🎭 Role-Based Locators**: `page.getByRole('button', { name: 'Submit' })`
-- **📝 Text Content Locators**: `page.getByText('Click here')`
-- **🏷️ Label Association**: `page.getByLabel('Email address')`
-- **💬 Placeholder Targeting**: `page.getByPlaceholder('Enter your name')`
-- **🧪 Test ID Support**: `page.getByTestId('submit-button')`
-- **⚙️ Generic Locators**: `page.locator('#elementId')` with CSS and XPath
-
-### Developer Features
-
-- **📦 Bulk Operations**: Copy all locators with filtering options
-- **📊 Element Analytics**: Detailed metadata including attributes, styles, and positioning
-- **🔧 Reliability Scoring**: Color-coded reliability indicators for locator strategies
-- **⚡ Performance Optimization**: Efficient selector generation with memory management
-- **🎨 Customizable Interface**: Responsive design that works in popup and side panel modes
-- **🔄 Live Updates**: Real-time locator refresh and validation
-
-## 🚀 Installation
-
-### From Chrome Web Store (Recommended)
-
-_Coming soon - extension will be published to Chrome Web Store_
-
-### Manual Installation (Developer Mode)
-
-1. **Download Extension**
-
-   ```bash
-   git clone https://github.com/TheWonderApps/FindMyWebElement.git
-   cd FindMyWebElement
-   ```
-
-2. **Load in Chrome**
-
-   - Open Chrome and navigate to `chrome://extensions/`
-   - Enable "Developer mode" in the top right
-   - Click "Load unpacked" and select the extension folder
-   - The WebElement Inspector icon will appear in your toolbar
-
-3. **Verify Installation**
-   - Click the extension icon
-   - You should see the WebElement Inspector interface
-   - Test on any webpage to ensure functionality
-
-## 📖 Usage
-
-### Basic Workflow
-
-1. **🎯 Activate Selector**
-
-   - Click the WebElement Inspector toolbar icon
-   - Click "🎯 Activate Element Selector" button
-   - Your cursor will change to targeting mode
-
-2. **🔍 Element Selection**
-
-   - Hover over any page element to see it highlighted
-   - View quick locators in the live inspector panel
-   - Click on the desired element to generate full locators
-
-3. **📋 Copy Locators**
-
-   - Browse generated locators organized by type
-   - Use filtering options (All, CSS, XPath, Playwright, Recommended)
-   - Click individual "Copy" buttons or "Copy All" for bulk operations
-
-4. **✅ Validate & Test**
-   - Use "Preview" to highlight the selected element again
-   - Test locators directly in the browser console
-   - Verify element selection accuracy
-
-### Advanced Features
-
-#### Live Inspector Mode
-
-- **Real-time Updates**: See locators update as you hover
-- **Quick Access**: Get the three most common locator types instantly
-- **Smart Suggestions**: Prioritized by reliability and performance
-
-#### Settings Configuration
-
-- **Locator Types**: Enable/disable XPath, CSS, Playwright, and Advanced selectors
-- **Interface Options**: Toggle hover tooltips, live mode, and side panel integration
-- **Performance Tuning**: Adjust hover delays and batch processing
-
-#### Keyboard Shortcuts
-
-- **ESC**: Exit element selection mode
-- **Click**: Select element and generate locators
-- **Hover**: Activate live inspector (when enabled)
-
-## ⚙️ Settings & Options
-
-**🎯 Navigation:** Click the **gear icon (⚙️)** in the **top-right corner** of the side panel to access all settings and configuration options.
+1. [🚀 Getting Started](#-getting-started)
+2. [🆕 What's New in v2.0.0](#-whats-new-in-v200)
+3. [💡 Basic Usage](#-basic-usage)
+4. [⚙️ Settings & Configuration](#-settings--configuration)
+5. [🎯 Element Selection Guide](#-element-selection-guide)
+6. [📋 Understanding Locators](#-understanding-locators)
+7. [🔧 Advanced Features](#-advanced-features)
+8. [🐛 Troubleshooting](#-troubleshooting)
+9. [❓ Frequently Asked Questions](#-frequently-asked-questions)
+10. [💡 Tips & Best Practices](#-tips--best-practices)
+11. [🤝 Getting Support](#-getting-support)
 
 ---
 
-### Locator Configuration
+## 🚀 Getting Started
 
-#### **Enable/Disable Locator Types**
+### What is WebElement Inspector?
 
-- **✅ CSS Selectors**: Toggle CSS selector generation
-- **✅ XPath Expressions**: Enable/disable XPath locator creation
-- **✅ Playwright Locators**: Control Playwright-specific selector generation
-- **✅ Advanced Selectors**: Show/hide complex relationship selectors
+WebElement Inspector is a powerful Chrome extension designed to help developers, testers, and automation engineers quickly identify and generate reliable locators for web elements. Whether you're writing automated tests, debugging web applications, or learning web development, WebElement Inspector simplifies the process of finding unique element selectors.
 
-#### **Locator Preferences**
+### Key Benefits
 
-- **🎯 Prioritize IDs**: Give preference to ID-based selectors
-- **🏷️ Include ARIA Attributes**: Incorporate accessibility attributes
-- **📋 Test ID Priority**: Prioritize `data-testid` attributes for testing
-- **🔄 Dynamic Content Handling**: Smart detection of framework-generated elements
+- **⚡ Save Time**: Generate multiple locator types instantly
+- **🎯 Improve Accuracy**: Get reliable, stable selectors with enhanced error feedback
+- **🧪 Better Testing**: Create robust automation scripts with Playwright support
+- **📚 Learn Faster**: Understand CSS, XPath, and Playwright selectors
+- **🔄 Stay Updated**: Modern support for latest web technologies and Chrome Side Panel
+- **✨ Enhanced UX**: Cleaner interface with better error handling (New in v2.0.0)
 
-### Interface Customization
+### Quick Start (3 Steps)
 
-#### **Visual Settings**
+1. **Install**: Add WebElement Inspector to Chrome from the Extensions page
+2. **Activate**: Click the extension icon in your browser toolbar or open in Side Panel
+3. **Select**: Click "▶️ Start Selection" and start clicking elements!
 
-- **🎨 Theme Selection**: Light/Dark mode toggle
-- **📏 Panel Size**: Adjust side panel width (300px - 500px)
-- **🎯 Highlight Colors**: Customize element highlighting colors
-- **⏱️ Hover Delay**: Adjust tooltip and highlight timing (100ms - 1000ms)
+---
 
-#### **Display Options**
+## � What's New in v2.0.0
 
-- **📱 Side Panel Mode**: Enable Chrome side panel integration
-- **🔄 Live Inspector**: Real-time locator updates on hover
-- **💡 Tooltips**: Show/hide informational tooltips
-- **📊 Reliability Indicators**: Display color-coded reliability scores
+### 🔧 Major Improvements
 
-### Performance Tuning
+#### **Enhanced Error Handling**
 
-#### **Processing Settings**
+- **Preview Element Button**: Now shows specific error messages when element highlighting fails
+- **Start Selection Feedback**: Clear error messages with details about what's blocking selection
+- **Cross-Page Navigation**: Fixed element highlighting issues when switching between pages
 
-- **⚡ Batch Size**: Control bulk operation processing (10-100 elements)
-- **🧠 Memory Management**: Automatic cleanup intervals
-- **📦 Cache Duration**: Locator caching for repeated elements (1-60 minutes)
-- **🔄 Refresh Rate**: Live inspector update frequency (50ms - 500ms)
+#### **UI/UX Enhancements**
 
-#### **Advanced Options**
+- **Renamed Section**: "Generated Locators" is now called "Recorded Locators" for clarity
+- **Better Header**: Improved spacing and alignment in the header area
+- **Cleaner Settings**: Removed unused options to reduce clutter
+- **Visual Polish**: Enhanced padding and visual balance throughout the interface
 
-- **🖼️ Cross-Frame Detection**: Enable iframe element detection
-- **🌑 Shadow DOM Support**: Include shadow boundary traversal
-- **📐 SVG Element Handling**: Specialized vector graphics support
-- **🎭 Framework Detection**: Automatic React/Angular/Vue.js recognition
+#### **Settings Optimization**
 
-### Accessibility Settings
+The extension now only shows these essential settings:
 
-#### **Screen Reader Support**
+- ✅ **Enable XPath**: Control XPath locator generation
+- ✅ **Enable CSS**: Control CSS selector generation
+- ✅ **Enable Playwright**: Control Playwright locator generation
+- ✅ **Enable Advanced**: Control advanced locator strategies
 
-- **🔊 Audio Feedback**: Enable sound notifications
-- **⌨️ Keyboard Navigation**: Enhanced keyboard shortcuts
-- **🎯 Focus Indicators**: High-contrast focus outlines
-- **📢 ARIA Announcements**: Screen reader compatibility
+**Removed Settings** (functionality preserved):
 
-#### **Visual Accessibility**
+- ❌ Live Mode setting (always available)
+- ❌ Hover Tooltip setting (always available)
+- ❌ Tooltip Position setting (not used)
+- ❌ Auto-Pin Delay setting (not used)
 
-- **🔍 High Contrast Mode**: Enhanced color contrast
-- **📏 Large Text Mode**: Increased font sizes
-- **🎨 Color Blind Support**: Alternative color schemes
-- **⚡ Reduced Motion**: Disable animations and transitions
+#### **Performance & Quality**
 
-### Data & Privacy
+- **Production Ready**: All debug code removed for better performance
+- **Memory Optimized**: Cleaner event handling and resource management
+- **Code Quality**: Streamlined codebase with modern best practices
 
-#### **Storage Management**
+---
 
-- **💾 Local Storage**: Extension settings and preferences
-- **🔄 Sync Settings**: Chrome sync integration for multi-device usage
-- **🗑️ Clear Data**: Reset all settings to defaults
-- **📤 Export Settings**: Backup configuration as JSON file
+## 💡 Basic Usage
 
-#### **Privacy Controls**
+### Step 1: Opening WebElement Inspector
 
-- **🔒 Data Collection**: No user data is collected or transmitted
-- **🌐 Local Processing**: All operations performed locally in browser
-- **🛡️ Permissions**: Minimal required permissions for functionality
-- **🔐 Secure Storage**: Chrome's built-in secure storage APIs
+**Method 1: Side Panel (Recommended)**
 
-### Keyboard Shortcuts
+- Click the WebElement Inspector icon (🎯) in your Chrome toolbar
+- The modern side panel interface opens alongside your webpage
+- The side panel stays open while you work, providing a better experience
 
-#### **Global Shortcuts**
+**Method 2: Extension Popup**
 
-- **`Ctrl + Shift + L`**: Activate element selector
-- **`Ctrl + Shift + S`**: Open settings panel
-- **`Ctrl + Shift + C`**: Copy all locators
-- **`ESC`**: Exit selection mode
+- Click the WebElement Inspector icon for the traditional popup view
+- Good for quick operations and smaller screens
 
-#### **Selection Mode Shortcuts**
+### Step 2: Activating Element Selection
 
-- **`Click`**: Select element and generate locators
-- **`Ctrl + Click`**: Add element to multi-selection
-- **`Shift + Click`**: Select element range
-- **`Tab`**: Navigate between highlighted elements
+1. **Click the Start Button**: Press "▶️ Start Selection" (updated in v2.0.0)
+2. **Visual Feedback**: Status indicator shows "Selection Active" with green dot
+3. **Cursor Change**: Your cursor changes to indicate selection mode is active
+4. **Error Handling**: If selection fails to start, you'll see specific error messages explaining why
 
-### Reset & Troubleshooting
+### Step 3: Selecting Elements
 
-#### **Reset Options**
+1. **Hover**: Move your mouse over any element on the webpage
+2. **See Highlights**: Elements are highlighted with colored borders
+3. **Live Preview**: See basic locators update in real-time (if enabled)
+4. **Click**: Click on the element you want to locate
+5. **Instant Results**: View all generated locators in the "Recorded Locators" section (renamed in v2.0.0)
 
-- **🔄 Soft Reset**: Clear temporary data and cache
-- **⚡ Hard Reset**: Restore all settings to factory defaults
-- **🗑️ Clear Storage**: Remove all stored preferences
-- **🔧 Repair Installation**: Re-initialize extension components
+### Step 4: Using Generated Locators
 
-#### **Diagnostic Tools**
+1. **Browse Results**: All locators are organized by type and reliability
+2. **Copy Individual**: Click "📋 Copy" next to any locator
+3. **Copy All**: Use "Copy All Locators" for bulk operations
+4. **Filter Options**: Use the dropdown to filter by type:
+   - **All Locators**: Show everything
+   - **CSS Only**: CSS selectors only
+   - **XPath Only**: XPath expressions only
+   - **Playwright Only**: Playwright locators only
+   - **Recommended**: High-reliability locators only
 
-- **🔍 Health Check**: Verify extension functionality
-- **📊 Performance Monitor**: Check memory usage and performance
-- **🐛 Debug Mode**: Enable detailed logging for troubleshooting
-- **📋 System Info**: Display browser and extension version details
+### Step 5: Preview Elements (Enhanced in v2.0.0)
 
-## 🔧 Generated Locator Types
+1. **Preview Button**: Click "🎯 Preview Element" to highlight the selected element on the page
+2. **Success Feedback**: Visual confirmation when element is successfully highlighted
+3. **Error Feedback**: Specific error messages if element cannot be found or highlighted
+4. **Cross-Page Support**: Works correctly even after navigating to different pages
+
+---
+
+## ⚙️ Settings & Configuration
+
+### Accessing Settings
+
+**Quick Access**: Click the **gear icon (⚙️)** in the header to expand/collapse settings.
+
+### Streamlined Settings (v2.0.0)
+
+The settings have been optimized to only show essential options that are actively used:
+
+#### **Core Locator Types**
+
+Control which types of locators are generated:
+
+- **✅ Enable XPath**: Generate XPath expressions (`//div[@id='example']`)
+- **✅ Enable CSS**: Generate CSS selectors (`#id`, `.class`, `[attribute]`)
+- **✅ Enable Playwright**: Generate Playwright locators (`page.getByRole()`, `page.getByTestId()`)
+- **✅ Enable Advanced**: Include complex relationship-based selectors
+
+#### **What Was Removed in v2.0.0**
+
+These settings were removed to simplify the interface (functionality preserved):
+
+- ❌ **Live Mode Setting**: Live mode is always available when hovering over elements
+- ❌ **Hover Tooltip Setting**: Tooltips are always shown during element selection
+- ❌ **Tooltip Position**: Not used in the current implementation
+- ❌ **Auto-Pin Delay**: Not used in the current implementation
+
+### Recommended Settings by Use Case
+
+#### **🧪 Test Automation Engineers**
+
+```
+✅ Enable XPath: ON
+✅ Enable CSS: ON
+✅ Enable Playwright: ON
+✅ Enable Advanced: OFF (for speed)
+```
+
+**Why**: Focus on the most commonly used locator types in automation frameworks.
+
+#### **🎓 Learning/Students**
+
+```
+✅ Enable XPath: ON
+✅ Enable CSS: ON
+✅ Enable Playwright: ON
+✅ Enable Advanced: ON
+```
+
+**Why**: See all possible locator types to understand different approaches.
+
+#### **🔧 Quick Debugging**
+
+```
+✅ Enable XPath: OFF
+✅ Enable CSS: ON
+✅ Enable Playwright: OFF
+✅ Enable Advanced: OFF
+```
+
+**Why**: Minimal, fast results focused on CSS selectors only.
+
+---
+
+## 🎯 Element Selection Guide
+
+### Understanding Element Highlighting
+
+When you hover over elements, you'll see different visual indicators:
+
+#### **Highlight Colors**
+
+- **🔵 Blue Border**: Normal selectable element
+- **🟢 Green Border**: High-confidence element (has ID or unique attributes)
+- **🟡 Yellow Border**: Dynamic element (framework-generated)
+- **🔴 Red Border**: Complex element (may need advanced selectors)
+
+#### **Context Labels**
+
+- **📄 FRAME**: Element inside an iframe
+- **🌑 SHADOW**: Element within Shadow DOM
+- **📐 SVG**: SVG element
+- **⚡ DYNAMIC**: Framework-generated element
+
+### Element Selection Strategies
+
+#### **For Buttons**
+
+1. Look for `data-testid` attributes (highest priority)
+2. Use `id` attributes when available
+3. Consider role-based selection (`button`, `submit`)
+4. Text content matching for stable buttons
+
+#### **For Form Inputs**
+
+1. Use `name` attribute (most reliable)
+2. Look for associated `label` elements
+3. Use `placeholder` text when unique
+4. `id` attributes as backup
+
+#### **For Text Elements**
+
+1. Exact text matching for stable content
+2. Partial text matching for dynamic content
+3. Role-based selection (`heading`, `paragraph`)
+4. Class-based selection as last resort
+
+#### **For Lists and Tables**
+
+1. Use structural selectors (`nth-child`)
+2. Content-based selection when possible
+3. Combination selectors for complex tables
+4. Avoid absolute positioning
+
+---
+
+## 📋 Understanding Locators
 
 ### CSS Selectors
 
-#### Basic Selectors
+#### **Basic CSS Selectors**
 
 ```css
-/* ID-based (Most Reliable) */
+/* Most Reliable - ID */
 #elementId
 
-/* Class-based */
-/* Class-based */
-.className, .multiple.classes
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+/* Good - Class names */
+.button-primary
 
-/* Attribute-based */
-[data-testid="value"]
-[name="fieldName"]
-[aria-label="Button Label"];
+/* Reliable - Attributes */
+[data-testid="submit-btn"]
+[name="email"]
+[aria-label="Close dialog"];
 ```
 
-#### Advanced CSS
+#### **When to Use CSS**
 
-```css
-/* Nth-child positioning */
-div:nth-child(3)
-button:first-child
-span:last-child
+- ✅ Quick debugging and inspection
+- ✅ Simple element identification
+- ✅ Working with modern web frameworks
+- ❌ Complex element relationships
+- ❌ Text-based selection
 
-/* Relationship selectors */
-.parent > .direct-child
-.ancestor .descendant
-.sibling + .next-sibling
-.reference ~ .general-sibling
+### XPath Selectors
 
-/* State-based selectors */
-input:checked
-button:disabled
-input:required
-a:link
-```
-
-### XPath Locators
-
-#### Absolute & Relative XPath
+#### **Basic XPath Patterns**
 
 ```xpath
-<!-- Absolute XPath -->
-/html/body/div[1]/form/input[2]
-
-<!-- Relative by attributes -->
+<!-- Attribute-based -->
 //*[@id="elementId"]
-//*[@class="className"]
-//*[@data-testid="submit-btn"]
+//*[@class="button-primary"]
 
 <!-- Text-based -->
-//*[text()="Exact Text"]
-//*[contains(text(), "Partial Text")]
+//*[text()="Submit"]
+//*[contains(text(), "Click here")]
 
-<!-- Smart XPath (Optimized) -->
-//button[@data-testid="submit"]
-//input[@name="email"]
+<!-- Relationship-based -->
+//button[following-sibling::span[text()="Required"]]
 ```
 
-#### XPath Axes (Advanced)
+#### **When to Use XPath**
 
-```xpath
-<!-- Relationship navigation -->
-//element//ancestor::div
-//element//descendant::span
-//element//following-sibling::*[1]
-//element//preceding-sibling::*[1]
-//element//following::*[1]
-//element//preceding::*[1]
-```
+- ✅ Complex element relationships
+- ✅ Text-based element selection
+- ✅ Advanced filtering and conditions
+- ✅ Backwards compatibility
+- ❌ Performance-critical applications
+- ❌ Simple element selection
 
 ### Playwright Locators
 
-#### Semantic Locators (Recommended)
+#### **Modern Playwright Patterns**
 
 ```javascript
 // Role-based (Best Practice)
 page.getByRole("button", { name: "Submit" });
 page.getByRole("textbox", { name: "Email" });
-page.getByRole("link", { name: "Homepage" });
 
-// Text content
-page.getByText("Click here");
-page.getByText(/Sign in/i); // Regex support
+// Text-based
+page.getByText("Welcome back!");
+page.getByText(/Sign in/i);
 
-// Form elements
+// Form-specific
 page.getByLabel("Password");
-page.getByPlaceholder("Enter email...");
+page.getByPlaceholder("Enter your email");
 
-// Test attributes
+// Test IDs
 page.getByTestId("submit-button");
-page.getByTestId("user-profile");
 ```
 
-#### Generic Locators
+#### **When to Use Playwright**
 
-```javascript
-// CSS locators
-page.locator("#elementId");
-page.locator(".className");
-page.locator('[data-testid="value"]');
+- ✅ Modern test automation
+- ✅ Accessibility-focused testing
+- ✅ Stable, semantic selection
+- ✅ Cross-browser compatibility
+- ❌ Legacy testing frameworks
+- ❌ Non-test automation use cases
 
-// XPath locators
-page.locator('//button[text()="Submit"]');
-page.locator('//*[@id="dynamic-content"]');
-```
+---
 
-## 🏗️ Architecture
+## 🔧 Advanced Features
 
-### Extension Components
+### Live Inspector Mode
 
-#### **Content Script** (`content.js`)
+**What it does**: Shows locators in real-time as you hover over elements
 
-- **DOM Interaction**: Element selection, highlighting, and event handling
-- **Locator Generation**: CSS, XPath, and Playwright selector creation
-- **Visual Feedback**: Tooltips, highlights, and UI indicators
-- **Cross-Frame Communication**: Message passing between frames
+**How to enable**:
 
-#### **Background Script** (`background-fixed.js`)
+1. Click the gear icon (⚙️)
+2. Enable "🔴 Live Mode"
+3. See instant updates in the live inspector panel
 
-- **Extension Lifecycle**: Service worker for Manifest V3 compatibility
-- **Message Routing**: Communication hub between content and popup
-- **State Management**: Extension activation and configuration persistence
+**Best for**:
 
-#### **Popup Interface** (`popup-redesigned.html/js/css`)
+- Rapid element exploration
+- Learning different locator types
+- Quick element verification
 
-- **User Interface**: Modern, responsive design with side panel support
-- **Settings Management**: Configuration options with real-time updates
-- **Data Display**: Locator presentation with filtering and organization
-- **Copy Operations**: Clipboard integration with fallback mechanisms
+### Multi-Element Selection
 
-### Data Flow
+**Keyboard Shortcuts**:
 
-```mermaid
-graph TD
-    A[User Interaction] --> B[Content Script]
-    B --> C[Element Detection]
-    C --> D[Locator Generation]
-    D --> E[Background Script]
-    E --> F[Popup Interface]
-    F --> G[User Display]
+- **`Ctrl + Click`**: Add elements to selection
+- **`Shift + Click`**: Select element range
+- **`Tab`**: Navigate between highlighted elements
 
-    H[Settings] --> I[Storage API]
-    I --> J[Cross-Component Sync]
-```
+**Use cases**:
 
-## 🎨 Visual Features
+- Comparing locators for similar elements
+- Bulk locator generation
+- Pattern recognition
 
-### Element Highlighting
+### Cross-Frame Support
 
-- **🎯 Precision Borders**: Accurate element boundary visualization
-- **📍 Position Indicators**: Coordinate display and element dimensions
-- **🏷️ Context Labels**: Frame, Shadow DOM, SVG, and dynamic element indicators
-- **🎨 State-Aware Colors**: Different colors for hover, selection, and preview states
+**Automatic Detection**: WebElement Inspector automatically detects:
 
-### Interface Design
+- 🖼️ Iframe elements
+- 🌑 Shadow DOM content
+- 📐 SVG elements
+- ⚡ Dynamic content
 
-- **📱 Responsive Layout**: Works in popup (400px) and side panel (300px+) modes
-- **🎨 Modern Styling**: Clean, professional interface with intuitive icons
-- **⚡ Smooth Animations**: Hover effects, transitions, and loading states
-- **🌙 Visual Hierarchy**: Color-coded reliability levels and organized sections
+**Visual Indicators**: Look for context labels showing element location
 
-### Live Inspector
+### Reliability Scoring
 
-- **🔄 Real-Time Updates**: Instant locator generation on hover
-- **📊 Smart Prioritization**: Most reliable selectors shown first
-- **🎯 Quick Actions**: One-click copy for common locator types
+**Color-coded indicators**:
 
-## ⚙️ Technical Features
+- 🟢 **Green**: Highly reliable (ID, test-id, unique attributes)
+- 🟡 **Yellow**: Moderately reliable (stable classes, attributes)
+- 🔴 **Red**: Less reliable (positional, generated classes)
 
-### Advanced DOM Support
-
-#### Cross-Frame Compatibility
-
-- **🖼️ Iframe Detection**: Automatic frame boundary recognition
-- **🔗 Cross-Origin Handling**: Graceful degradation for security restrictions
-- **📡 Message Passing**: Efficient communication between frame contexts
-- **🔄 State Synchronization**: Consistent behavior across all frames
-
-#### Shadow DOM & SVG
-
-- **🌑 Shadow Boundary Detection**: Identifies shadow DOM elements
-- **🎨 SVG Element Support**: Specialized handling for vector graphics
-- **📐 Coordinate Mapping**: Accurate positioning within shadow contexts
-
-#### Dynamic Content Recognition
-
-- **⚡ Framework Detection**: Identifies React, Angular, Vue.js generated content
-- **🔄 Dynamic Attributes**: Recognizes temporary IDs and generated classes
-- **📊 Reliability Assessment**: Scores locators based on stability factors
-
-### Performance Optimization
-
-#### Efficient Processing
-
-- **⚡ Fast Selectors**: Prioritizes high-performance locator strategies
-- **🧠 Memory Management**: Proper cleanup of event listeners and DOM references
-- **📦 Batch Operations**: Optimized bulk locator generation
-- **⏱️ Debounced Updates**: Prevents excessive computation during rapid interactions
-
-#### Error Handling
-
-- **🛡️ Context Validation**: Extension lifecycle awareness
-- **🔄 Graceful Degradation**: Fallback mechanisms for API failures
-- **📊 Error Recovery**: Automatic retry logic for transient failures
-
-### Accessibility & Standards
-
-#### ARIA Integration
-
-- **♿ Semantic Markup**: Leverages role, label, and description attributes
-- **⌨️ Keyboard Navigation**: Accessible interaction patterns
-- **🔊 Screen Reader Support**: Compatible with assistive technologies
-- **🎯 Focus Management**: Proper focus handling and visual indicators
-
-#### Web Standards Compliance
-
-- **📋 CSS.escape()**: Proper CSS selector escaping
-- **🔍 XPath Standards**: W3C-compliant XPath expression generation
-- **🎭 Playwright Best Practices**: Modern automation framework patterns
-
-## 🧪 Testing Integration
-
-### Playwright Test Examples
-
-#### Basic Element Interaction
-
-```javascript
-import { test, expect } from "@playwright/test";
-
-test("user login flow", async ({ page }) => {
-  // Using WebElement Inspector generated locators
-  await page.goto("https://example.com/login");
-
-  // Form interaction
-  await page.getByLabel("Email address").fill("user@example.com");
-  await page.getByLabel("Password").type("secretPassword");
-  await page.getByRole("button", { name: "Sign In" }).click();
-
-  // Validation
-  await expect(page.getByText("Welcome back!")).toBeVisible();
-  await expect(page.locator("#user-dashboard")).toBeVisible();
-});
-```
-
-#### Advanced Locator Strategies
-
-```javascript
-test("dynamic content handling", async ({ page }) => {
-  // Test ID approach for dynamic content
-  await page.getByTestId("product-search").fill("laptop");
-  await page.getByTestId("search-button").click();
-
-  // Combined strategies for robustness
-  const productCard = page.locator('[data-testid="product-card"]').first();
-  await expect(productCard.getByRole("heading")).toContainText("Laptop");
-
-  // XPath for complex relationships
-  await page
-    .locator('//div[@class="product"]//button[text()="Add to Cart"]')
-    .click();
-});
-```
-
-### Testing Best Practices
-
-#### Locator Strategy Priority
-
-1. **🥇 Semantic Locators**: `getByRole`, `getByLabel` - Most stable and accessible
-2. **🥈 Test Attributes**: `getByTestId` - Purpose-built for testing
-3. **🥉 Text Content**: `getByText` - Good for static content
-4. **🔧 CSS/XPath**: Generic locators for complex scenarios
-
-#### Reliability Guidelines
-
-- **✅ Prefer stable attributes**: IDs, test IDs, and semantic roles
-- **⚠️ Avoid brittle selectors**: Nth-child, absolute XPath, generated classes
-- **🔄 Combine strategies**: Use multiple locators for critical elements
-- **🧪 Validate across states**: Test locators in different application states
-
-## 🔄 Version History
-
-### v1.1.2 (Current)
-
-- **🎨 Enhanced Visual Design**: Redesigned interface with improved usability
-- **⚡ Performance Improvements**: Optimized locator generation algorithms
-- **🐛 Bug Fixes**: Resolved iframe communication and clipboard issues
-- **📱 Responsive Updates**: Better support for different viewport sizes
-
-### v1.1.1
-
-- **🔧 Stability Improvements**: Enhanced error handling and context validation
-- **📋 Clipboard Enhancements**: More reliable copy operations
-- **🎯 Locator Accuracy**: Improved XPath and CSS selector generation
-
-### v1.1.0
-
-- **🎭 Playwright Integration**: Full support for Playwright locator strategies
-- **🏗️ Architecture Redesign**: Manifest V3 compliance and modern APIs
-- **📊 Advanced Analytics**: Element reliability scoring and performance metrics
-
-### v1.0.0
-
-- **🚀 Initial Release**: Core functionality with CSS and XPath support
-- **🎨 Visual Interface**: Element highlighting and interactive selection
-- **🔄 Multi-Frame Support**: Basic iframe and cross-origin handling
-
-### 🔮 Roadmap
-
-- **🌑 Enhanced Shadow DOM**: Complete shadow boundary traversal
-- **📐 Advanced Positioning**: Pixel-perfect coordinate targeting
-- **🧪 Built-in Testing**: Locator validation and reliability testing
-- **📤 Export/Import**: Configuration and locator set management
-- **🤖 AI-Powered Suggestions**: Machine learning locator optimization
-
-## 🛠️ Development
-
-### Project Structure
-
-```
-FindMyWebElement/
-├── manifest.json              # Extension configuration
-├── content.js                 # Main content script
-├── content.css               # Styling for injected elements
-├── background-fixed.js       # Service worker
-├── popup-redesigned.html     # Main interface
-├── popup-redesigned.js       # Interface logic
-├── popup-redesigned.css      # Interface styling
-├── injected.js              # Page context script
-├── icons/                   # Extension icons
-│   ├── Generate-MaxSpace-Icons.ps1
-│   ├── icon.svg
-│   └── icon*.png
-└── README.md
-```
-
-### Build Process
-
-```bash
-# Clone repository
-git clone https://github.com/TheWonderApps/FindMyWebElement.git
-cd FindMyWebElement
-
-# Generate icons (Windows PowerShell)
-cd icons
-.\Generate-MaxSpace-Icons.ps1
-
-# Load in Chrome for development
-# Open chrome://extensions/
-# Enable Developer mode
-# Click "Load unpacked" and select project folder
-```
-
-### Contributing Guidelines
-
-1. **🍴 Fork the repository**
-2. **🌿 Create a feature branch** (`git checkout -b feature/amazing-feature`)
-3. **💾 Commit changes** (`git commit -m 'Add amazing feature'`)
-4. **📤 Push to branch** (`git push origin feature/amazing-feature`)
-5. **🔄 Open a Pull Request**
-
-### Code Standards
-
-- **📝 ESLint Configuration**: Follow established JavaScript patterns
-- **🎨 CSS Methodology**: BEM naming convention for styles
-- **📚 Documentation**: Comprehensive inline comments
-- **🧪 Testing**: Manual testing across different websites and scenarios
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 TheWonderApps
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
-
-## 🤝 Support & Community
-
-### Getting Help
-
-- **📋 GitHub Issues**: Report bugs and request features
-- **💬 Discussions**: Community support and best practices
-- **📖 Documentation**: Comprehensive guides and examples
-- **🎥 Video Tutorials**: Step-by-step usage guides _(coming soon)_
-
-### Contributing
-
-We welcome contributions from the community! Whether it's:
-
-- **🐛 Bug Reports**: Help us identify issues
-- **💡 Feature Requests**: Suggest improvements
-- **📝 Documentation**: Improve guides and examples
-- **💻 Code Contributions**: Submit pull requests
-- **🎨 Design Improvements**: Enhance user experience
+---
 
 ## 🐛 Troubleshooting
 
-### Common Issues
+### v2.0.0 Specific Issues & Enhanced Error Handling
 
-#### Extension Not Activating
+#### **"Start Selection" Button Shows Detailed Errors**
 
-```bash
-# Solutions:
-1. Refresh the current page
-2. Check browser console for errors
-3. Ensure extension has permissions for the site
-4. Try disabling/re-enabling the extension
-```
+**New in v2.0.0**: The extension now provides specific error messages instead of generic failures.
 
-#### Locators Not Working
+**Common Error Messages & Solutions**:
 
-```bash
-# Debugging steps:
-1. Use the Preview function to validate element selection
-2. Check if the element is in an iframe or shadow DOM
-3. Try different locator types (CSS vs XPath vs Playwright)
-4. Verify the element hasn't changed after page interactions
-```
+- **"❌ No active tab found. Please select a tab and try again."**
 
-#### Copy to Clipboard Fails
+  - Refresh the current webpage
+  - Make sure you're not on a Chrome internal page (chrome://)
+  - Try switching to a different tab and back
 
-```bash
-# Fallback options:
-1. Manual selection from the interface
-2. Enable clipboard permissions in browser settings
-3. Use keyboard shortcuts (Ctrl+C) after selecting text
-4. Check for browser security restrictions
-```
+- **"❌ Error starting selection: Content script injection failed"**
 
-### Performance Tips
+  - The website might have strict security policies
+  - Try refreshing the page and trying again
+  - Check if the site allows extensions
 
-- **⚡ Use ID selectors** when available for best performance
-- **🎯 Prefer semantic locators** for maintainability
-- **📊 Check reliability indicators** for locator stability
-- **🔄 Test across different page states** for robustness
+- **"❌ Error starting selection: Extension context invalid"**
+  - Reload the extension from chrome://extensions/
+  - Restart Chrome browser
+  - Check for Chrome updates
 
-## 💡 Advanced Usage Tips
+#### **Preview Element Enhanced Feedback**
 
-### Optimal Locator Selection Strategy
+**New in v2.0.0**: Preview Element button now shows specific success/failure messages.
 
-#### 1. Reliability Hierarchy
+**Success Messages**:
 
-🥇 **ID Selectors** → 🥈 **Test Attributes** → 🥉 **Semantic Roles** → **CSS Classes** → **XPath**
+- Element highlighting works correctly with visual feedback
 
-#### 2. Context-Specific Recommendations
+**Error Messages & Solutions**:
 
-- **🎭 Testing Automation**: Prioritize `data-testid` and semantic locators
-- **🔧 Development Debugging**: Use CSS selectors for quick identification
-- **📊 Analytics Tracking**: Leverage role-based and text-based locators
-- **♿ Accessibility Testing**: Focus on ARIA attributes and semantic markup
+- **"⚠️ No element selected"**: You need to select an element first before previewing
+- **"❌ Error highlighting element"**:
+  - The element may have been removed or changed since selection
+  - Try re-selecting the element on the current page
+  - Scroll to make the element visible
+  - Refresh the page if elements have changed
 
-#### 3. Dynamic Content Strategies
+#### **"Recorded Locators" Section (Renamed in v2.0.0)**
 
-- **⚡ Framework Apps**: Use test IDs and avoid generated classes
-- **🔄 AJAX Content**: Prefer text-based locators with contains() functions
-- **📱 Responsive Design**: Test locators across different viewport sizes
-- **🎨 Theme Changes**: Avoid appearance-based selectors
+**What Changed**: "Generated Locators" is now called "Recorded Locators" for better clarity.
 
-### Power User Features
+**If no locators appear**:
 
-#### Bulk Operations
+1. Make sure you've actually clicked on an element (not just hovered)
+2. Check your settings - ensure at least one locator type is enabled
+3. Try selecting a different, simpler element first
+4. Refresh the page and try again
+
+### Classic Issues & Solutions
+
+#### **Extension Not Working**
+
+**Problem**: Extension icon appears but nothing happens when clicked
+**Solutions**:
+
+1. Refresh the current webpage
+2. Check if the page is restricted (some internal pages block extensions)
+3. Try on a different website
+4. Restart Chrome browser
+
+#### **Elements Not Highlighting**
+
+**Problem**: Hovering over elements doesn't show blue borders
+**Solutions**:
+
+1. Make sure "🎯 Activate Element Selector" is clicked (should show green status)
+2. Check if page has conflicting styles or overlays
+3. Try clicking the activation button again
+4. Scroll the page to refresh element detection
+
+#### **No Locators Generated**
+
+**Problem**: Clicking elements doesn't generate any locators
+**Solutions**:
+
+1. Verify extension permissions on the website
+2. Check browser console for error messages
+3. Try selecting a different element type (button, input, etc.)
+4. Disable other extensions temporarily
+
+#### **Copy to Clipboard Fails**
+
+**Problem**: "Copy" buttons don't work
+**Solutions**:
+
+1. Enable clipboard permissions in Chrome settings
+2. Use manual text selection and Ctrl+C
+3. Check for browser security restrictions
+4. Try the "Copy All" button instead
+
+#### **Settings Not Saving**
+
+**Problem**: Configuration changes don't persist
+**Solutions**:
+
+1. Check Chrome storage permissions
+2. Clear extension data and reconfigure
+3. Try disabling/re-enabling the extension
+4. Check available storage space
+
+### Performance Issues (Improved in v2.0.0)
+
+#### **Better Performance**
+
+**What's Improved in v2.0.0**:
+
+- Removed debug code for faster execution
+- Optimized memory usage with better cleanup
+- Streamlined settings reduce processing overhead
+
+**For Slow Response**:
+
+1. The simplified settings in v2.0.0 should improve performance
+2. Disable "Enable Advanced" for faster locator generation
+3. Close other resource-heavy browser tabs
+4. Use the Side Panel instead of popup for better performance
+
+#### **Memory Usage**
+
+**Optimizations in v2.0.0**:
+
+- Better event handler cleanup prevents memory leaks
+- Removed unused code reduces memory footprint
+- More efficient DOM handling
+
+**Best Practices**:
+
+- Click "⏸️ Stop Selection" when finished
+- Close extension when not in use
+- Use Side Panel for extended sessions
+- Restart browser periodically for heavy usage
+- Close extension popup when not in use
+- Restart browser periodically for heavy usage
+- Use the side panel instead of popup for better memory management
+
+---
+
+## ❓ Frequently Asked Questions
+
+### v2.0.0 Specific Questions
+
+**Q: What changed in v2.0.0?**
+A: Major improvements include:
+
+- Enhanced error handling with specific error messages
+- UI cleanup with "Recorded Locators" section rename
+- Streamlined settings (removed unused options)
+- Better cross-page navigation support
+- Production-ready code with improved performance
+
+**Q: Where did the "Live Mode" and "Hover Tooltip" settings go?**
+A: These settings were removed in v2.0.0 to simplify the interface, but the functionality is preserved:
+
+- Live mode is always available when hovering over elements
+- Hover tooltips are always shown during element selection
+- This change reduces clutter while maintaining all functionality
+
+**Q: Why do I see more detailed error messages now?**
+A: v2.0.0 introduced enhanced error handling:
+
+- "Start Selection" shows specific reasons for failures
+- "Preview Element" provides clear success/failure feedback
+- Better error messages help you understand and fix issues quickly
+
+**Q: What's the difference between "Generated Locators" and "Recorded Locators"?**
+A: It's the same feature with a clearer name:
+
+- "Generated Locators" (old name) → "Recorded Locators" (new name in v2.0.0)
+- The functionality is identical - we just renamed it for better clarity
+- It shows all the locators for your selected element
+
+### General Questions
+
+**Q: Is WebElement Inspector free to use?**
+A: Yes! WebElement Inspector is completely free and open-source under the MIT license.
+
+**Q: Does it work on all websites?**
+A: WebElement Inspector works on most websites, but some restrictions apply:
+
+- Chrome internal pages (chrome://)
+- Some corporate/restricted sites
+- Pages with strict Content Security Policies
+
+**Q: Can I select multiple elements at once?**
+A: Currently, WebElement Inspector focuses on one element at a time for precision. You can:
+
+- Select one element
+- Get its locators
+- Repeat for additional elements
+
+**Q: Do I need special permissions to use this extension?**
+A: The extension only requires standard permissions to work with web pages. It doesn't collect personal data or track your browsing.
+
+**Q: Can I contribute to the project?**
+A: Absolutely! WebElement Inspector is open-source. You can:
+
+- Report bugs and suggest features on GitHub
+- Submit pull requests with improvements
+- Help with documentation
+
+**Q: Will this slow down my browsing?**
+A: No! The extension runs in "passive mode" and only activates when you start element selection. It has minimal impact on browsing performance.
+
+**Q: How do I update to the latest version?**
+A: Chrome updates extensions automatically, but you can force an update:
+
+1. Go to chrome://extensions/
+2. Enable "Developer mode"
+3. Click "Update" button
+
+**Q: Can I use it with other testing tools?**
+A: Absolutely! Generated locators work with:
+
+- Selenium WebDriver
+- Playwright
+- Cypress
+- Puppeteer
+- And any other automation framework
+
+### Technical Questions
+
+**Q: What's the difference between CSS and XPath?**
+A:
+
+- **CSS**: Faster, simpler, better for basic selection
+- **XPath**: More powerful, supports text matching and complex relationships
+
+**Q: Why should I use Playwright locators?**
+A: Playwright locators are:
+
+- More stable and reliable
+- Accessibility-focused
+- Better for modern web applications
+- Easier to read and maintain
+
+**Q: How accurate are the generated locators?**
+A: Accuracy depends on the element:
+
+- Elements with IDs: ~95% reliable
+- Elements with test attributes: ~90% reliable
+- Elements with stable classes: ~80% reliable
+- Position-based selectors: ~60% reliable
+
+### Usage Questions
+
+**Q: How do I select elements inside iframes?**
+A: WebElement Inspector automatically detects iframe content. Just activate selection and click normally - you'll see a "FRAME" label on iframe elements.
+
+**Q: Can I customize the generated locators?**
+A: Currently, locators are auto-generated, but you can:
+
+- Enable/disable specific locator types
+- Filter by reliability
+- Copy and modify manually
+
+**Q: How do I test if a locator works?**
+A: Use the browser console:
 
 ```javascript
-// Copy all CSS selectors
-// Use filter: "css" → Copy All
+// Test CSS selectors
+document.querySelector("#your-selector");
 
-// Copy recommended locators only
-// Use filter: "recommended" → Copy All
-
-// Export for test automation
-// Combine multiple locator strategies for robustness
+// Test XPath
+document.evaluate(
+  "//your/xpath",
+  document,
+  null,
+  XPathResult.FIRST_ORDERED_NODE_TYPE,
+  null
+).singleNodeValue;
 ```
 
-#### Advanced XPath Techniques
+---
 
-```xpath
-<!-- Dynamic element handling -->
-//*[contains(@class, 'dynamic-')]
-//*[starts-with(@id, 'generated_')]
+## 💡 Tips & Best Practices
 
-<!-- Multiple condition matching -->
-//button[@type='submit' and contains(text(), 'Save')]
-//input[@name='email' or @id='email-field']
+### Locator Selection Strategy
 
-<!-- Position-based selection -->
-//div[@class='row'][position()=1]
-//li[last()]
-//span[position()>2 and position()<5]
+#### **Priority Order (Most to Least Reliable)**
+
+1. 🥇 **ID attributes** (`#unique-id`)
+2. 🥈 **Test attributes** (`[data-testid="button"]`)
+3. 🥉 **Semantic roles** (`page.getByRole('button')`)
+4. **Stable class names** (`.btn-primary`)
+5. **Name attributes** (`[name="email"]`)
+6. **Text content** (`page.getByText('Submit')`)
+7. **XPath relationships** (`//button[following-sibling::span]`)
+8. **Position-based** (`:nth-child()`)
+
+
+
+### Testing Best Practices
+
+#### **Create Robust Selectors**
+
+```javascript
+// ✅ Good - Multiple fallback strategies
+page
+  .getByTestId("submit-btn")
+  .or(page.getByRole("button", { name: "Submit" }))
+  .or(page.locator("#submit-button"));
+
+// ❌ Bad - Single fragile selector
+page.locator(".MuiButton-root.MuiButton-contained.css-1234567");
 ```
+
+#### **Test Across Different States**
+
+- Test locators when elements are:
+  - Visible/Hidden
+  - Enabled/Disabled
+  - Expanded/Collapsed
+  - Before/After user interactions
+
+### Performance Optimization
+
+#### **For Large Pages**
+
+- Use specific locator types only
+- Disable Live Mode and Hover Tooltips
+- Select elements in smaller page sections
+- Use the side panel instead of popup
+
+#### **For Complex Applications**
+
+- Focus on stable, semantic selectors
+- Avoid deep CSS nesting
+- Prefer test IDs over generated classes
+- Test locators in different browser states
+
+### Learning and Development
+
+#### **Study Generated Locators**
+
+- Compare different approaches for the same element
+- Understand why some selectors are more reliable
+- Learn CSS and XPath syntax through examples
+- Practice with the "Advanced Selectors" option
+
+#### **Build Good Habits**
+
+- Always verify locators work in browser console
+- Document why specific locators were chosen
+- Update locators when application changes
+- Share reliable patterns with your team
+
+---
+
+## 🤝 Getting Support
+
+### Before Seeking Help
+
+1. **Check this Help document** - Most common issues are covered here
+2. **Try basic troubleshooting** - Refresh page, restart browser
+3. **Test on different websites** - Isolate the issue
+4. **Check browser console** - Look for error messages
+
+### Support Channels
+
+#### **🐛 Bug Reports**
+
+**GitHub Issues**: [Report a Bug](https://github.com/TheWonderApps/FindMyWebElement/issues)
+
+**Include this information**:
+
+- Chrome version
+- Extension version
+- Website URL (if not sensitive)
+- Steps to reproduce
+- Screenshot or screen recording
+- Browser console errors
+
+#### **💡 Feature Requests**
+
+**GitHub Discussions**: [Request Features](https://github.com/TheWonderApps/FindMyWebElement/discussions)
+
+**Describe**:
+
+- What you want to achieve
+- Current workaround (if any)
+- Why it would be helpful
+- Example use cases
+
+#### **❓ General Questions**
+
+**GitHub Discussions**: [Ask Questions](https://github.com/TheWonderApps/FindMyWebElement/discussions)
+
+**For questions about**:
+
+- How to use specific features
+- Best practices
+- Integration with other tools
+- Learning resources
+
+### Community Resources
+
+#### **📖 Documentation**
+
+- [README.md](https://github.com/TheWonderApps/WebElement Inspector/blob/main/README.md) - Full project documentation
+- [GitHub Repository](https://github.com/TheWonderApps/FindMyWebElement) - Source code and updates
+
+#### **🎓 Learning Resources**
+
+- [CSS Selectors Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+- [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp)
+- [Playwright Documentation](https://playwright.dev/docs/locators)
+- [Selenium WebDriver Guide](https://selenium-python.readthedocs.io/locating-elements.html)
 
 ---
 
 <div align="center">
 
-**WebElement Inspector** - _Simplifying DOM element location for developers and testers worldwide!_ 🎯
+## 🎯 Happy Element Hunting!
 
-**[⭐ Star this project](https://github.com/TheWonderApps/FindMyWebElement)** • **[🐛 Report Issues](https://github.com/TheWonderApps/FindMyWebElement/issues)** • **[💡 Request Features](https://github.com/TheWonderApps/FindMyWebElement/discussions)**
+**WebElement Inspector** makes web element location simple, fast, and reliable.
+
+_Remember: The best locator is the one that works consistently in your specific context._
+
+---
+
+**Need more help?** Visit our [GitHub repository](https://github.com/TheWonderApps/FindMyWebElement) or [open an issue](https://github.com/TheWonderApps/FindMyWebElement/issues).
 
 Made with ❤️ by [TheWonderApps](https://github.com/TheWonderApps)
 
