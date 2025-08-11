@@ -79,13 +79,6 @@ The extension now only shows these essential settings:
 - ✅ **Enable Playwright**: Control Playwright locator generation
 - ✅ **Enable Advanced**: Control advanced locator strategies
 
-**Removed Settings** (functionality preserved):
-
-- ❌ Live Mode setting (always available)
-- ❌ Hover Tooltip setting (always available)
-- ❌ Tooltip Position setting (not used)
-- ❌ Auto-Pin Delay setting (not used)
-
 #### **Performance & Quality**
 
 - **Production Ready**: All debug code removed for better performance
