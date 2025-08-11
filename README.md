@@ -1,4 +1,4 @@
-# 🆘 WebElement Inspector v2.0.0 Help Guide
+# 🎯 WebElement Inspector v2.0.0 Help Guide
 
 <div align="center">
 
