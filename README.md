@@ -157,15 +157,6 @@ Control which types of locators are generated:
 - **✅ Enable Playwright**: Generate Playwright locators (`page.getByRole()`, `page.getByTestId()`)
 - **✅ Enable Advanced**: Include complex relationship-based selectors
 
-#### **What Was Removed in v2.0.0**
-
-These settings were removed to simplify the interface (functionality preserved):
-
-- ❌ **Live Mode Setting**: Live mode is always available when hovering over elements
-- ❌ **Hover Tooltip Setting**: Tooltips are always shown during element selection
-- ❌ **Tooltip Position**: Not used in the current implementation
-- ❌ **Auto-Pin Delay**: Not used in the current implementation
-
 ### Recommended Settings by Use Case
 
 #### **🧪 Test Automation Engineers**
