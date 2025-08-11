@@ -781,6 +781,6 @@ _Remember: The best locator is the one that works consistently in your specific 
 
 **Need more help?** Visit our [GitHub repository](https://github.com/TheWonderApps/FindMyWebElement) or [open an issue](https://github.com/TheWonderApps/FindMyWebElement/issues).
 
-Made with ❤️ by ##Nishad Hameed##
+Made with ❤️ by ##Nishad Hameed
 
 </div>
