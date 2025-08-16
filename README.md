@@ -5,9 +5,13 @@
 Complete User Guide for WebElement Inspector Chrome Extension
 </span>
 
+<span style="background-color: #e3f2fd; color: #1976d2; font-weight: bold; padding: 4px 8px; border-radius: 4px;">
+Your comprehensive resource for mastering element location and locator generation
+</span>
 
 
-_Your comprehensive resource for mastering element location and locator generation_
+
+
 
 **Version 2.0.0 | Released August 11, 2025**
 
