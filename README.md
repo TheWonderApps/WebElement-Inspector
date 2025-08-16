@@ -6,10 +6,10 @@
 <span style="background-color: #e0aaff; color: #240046; font-weight: bold; padding: 6px 10px; border-radius: 4px; font-size: 24px; display: block;">
 Complete User Guide for WebElement Inspector Chrome Extension
 </span>
-<span style="background-color: #e0aaff; color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 18px; display: block; margin-top: 6px;">
+<span style="color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 18px; display: block; margin-top: 6px;">
 Your comprehensive resource for mastering element location and locator generation
 </span>
-<span style="background-color: #e0aaff; color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 18px; display: block; margin-top: 6px; margin-bottom: 30px;">
+<span style="color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 18px; display: block; margin-top: 6px; margin-bottom: 30px;">
 Version 2.0.0 | Released August 11, 2025
 </span>
 
