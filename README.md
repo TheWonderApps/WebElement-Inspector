@@ -1,9 +1,6 @@
-# 🎯 WebElement Inspector v2.0.0 Help Guide
-
 <div align="center">
 
-
-<span style="background-color: #e0aaff; color: #240046; font-weight: bold; padding: 6px 10px; border-radius: 4px; font-size: 24px; display: block;">
+<span style="background-color: #e0aaff; color: #240046; font-weight: bold; padding: 6px 10px; border-radius: 4px; font-size: 32px; display: block;">
 Complete User Guide for WebElement Inspector Chrome Extension
 </span>
 <span style="color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 20px; display: block; margin-top: 6px;">
