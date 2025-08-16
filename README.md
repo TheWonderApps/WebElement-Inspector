@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<span style="background-color: #ffeb3b">Complete User Guide for WebElement Inspector Chrome Extension</span>
+<span style="background-color: #fdf445">Complete User Guide for WebElement Inspector Chrome Extension</span>
 
 
 
