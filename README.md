@@ -2,7 +2,9 @@
 
 <div align="center">
 
-**Complete User Guide for WebElement Inspector Chrome Extension**
+<span style="background-color: #ffeb3b">Complete User Guide for WebElement Inspector Chrome Extension</span>
+
+
 
 _Your comprehensive resource for mastering element location and locator generation_
 
