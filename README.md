@@ -28,6 +28,9 @@ _Your comprehensive resource for mastering element location and locator generati
 
 ---
 
+## Demo Video Here's a demonstration of our app: <iframe width="560" height="315" src="https://www.youtube.com/embed/J2-0iSsf1IQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe><img width="1095" height="108" alt="image" src="https://github.com/user-attachments/assets/2e805344-a7bd-4eb0-b881-71ebe2393e1e" />
+
+
 ## 🚀 Getting Started
 
 ### What is WebElement Inspector?
