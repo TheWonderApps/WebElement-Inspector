@@ -13,6 +13,14 @@ Your comprehensive resource for mastering element location and locator generatio
 Version 2.0.0 | Released August 11, 2025
 </span>
 
+<iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/J2-0iSsf1IQ" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
+
 
 </div>
 
