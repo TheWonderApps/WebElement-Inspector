@@ -1,14 +1,14 @@
 # 🎯 WebElement Inspector v2.0.0 Help Guide
 
 <div align="center">
-<span style="background-color: #e3f2fd; color: #1976d2; font-weight: bold; padding: 4px 8px; border-radius: 4px;">
+
+
+<span style="background-color: #e3f2fd; color: #1976d2; font-weight: bold; padding: 6px 10px; border-radius: 4px; font-size: 28px; display: block;">
 Complete User Guide for WebElement Inspector Chrome Extension
 </span>
-
-<span style="background-color: #e3f2fd; color: #1976d2; font-weight: bold; padding: 4px 8px; border-radius: 4px;">
+<span style="background-color: #e3f2fd; color: #1976d2; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 14px; display: block; margin-top: 6px;">
 Your comprehensive resource for mastering element location and locator generation
 </span>
-
 
 
 
