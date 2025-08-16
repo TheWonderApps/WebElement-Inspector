@@ -9,7 +9,7 @@ Complete User Guide for WebElement Inspector Chrome Extension
 <span style="background-color: #e0aaff; color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 18px; display: block; margin-top: 6px;">
 Your comprehensive resource for mastering element location and locator generation
 </span>
-<span style="background-color: #e0aaff; color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 18px; display: block; margin-top: 6px;">
+<span style="background-color: #e0aaff; color: #5a189a; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 18px; display: block; margin-top: 6px; margin-bottom: 30px;">
 Version 2.0.0 | Released August 11, 2025
 </span>
 
@@ -41,7 +41,6 @@ Version 2.0.0 | Released August 11, 2025
 8. [🐛 Troubleshooting](#-troubleshooting)
 9. [❓ Frequently Asked Questions](#-frequently-asked-questions)
 10. [💡 Tips & Best Practices](#-tips--best-practices)
-11. [🤝 Getting Support](#-getting-support)
 
 ---
 
