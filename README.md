@@ -3,6 +3,9 @@
 <div align="center">
 
 <span style="background-color: #fdf445">Complete User Guide for WebElement Inspector Chrome Extension</span>
+<span style="background-color: #e3f2fd; color: #1976d2; font-weight: bold; padding: 4px 8px; border-radius: 4px;">
+Complete User Guide for WebElement Inspector Chrome Extension
+</span>
 
 
 
